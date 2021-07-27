@@ -68,10 +68,3 @@
 
 		dpkg -P [.deb package]:
 		Remove/Delete everything including configuration files.
-
-		
-
-
-
-
-
