@@ -1,0 +1,77 @@
+1) apt:
+	
+	retrieves information and packages from the authenticated sources for installation. Upgrade and removal of packages along with their dependencies.
+	This is a High Level pacakge manager.
+
+		Commands:
+
+			apt update:
+			Used to synchronize the package index files from their sources again.
+
+			apt upgrade:
+			used to install the latest versions of the packages currently installed on the user’s system from the sources enumerated in /etc/apt/sources.list.
+
+			apt dist-upgrade:
+			This command performs the function of upgrade, and also handles changing dependencies with new versions of packages.
+
+			apt install:
+			Used to update/install packages. All the dependencies of the desired packages will also be retrieved and installed. 
+			
+				options:
+				
+					apt install -f:
+					Force the installation of the broken packages using the -f flag.
+					apt will automatically search for broken packages on your system and reinstall them from the official repository.
+
+
+			apt remove[PACKAGE NAMES]:
+			Used to remove packages. Doesn't remove the config files.
+
+			apt purge [PACKAGE NAMES]:
+			Used to remove packages and also the config files.
+
+			apt check:
+			Used to update the package cache and checks for broken dependencies.
+
+			apt download [PACKAGE NAMES]:
+			Used to download the given binary package in the current directory.
+
+			apt --fix-broken install:
+
+			apt list:
+			Displays a list of all available packages.
+				
+				options:
+
+					apt --installed:
+
+					apt --upgradeable:
+
+					apt --all-versions:
+
+
+2)	dpkg: 
+	
+	dpkg is used to install/manage individual packages.
+	This is a Low Level pacakge manager.
+
+	options:
+
+		dpkg -i [.deb package]:
+		install/upgrade package.
+
+		dpkg -R [.deb package]:
+		Install all packages recursively from directory.
+		
+		dpkg -r [.deb package]:
+		Remove/Delete an installed package except configuration files.
+
+		dpkg -P [.deb package]:
+		Remove/Delete everything including configuration files.
+
+		
+
+
+
+
+
