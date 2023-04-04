@@ -1,4 +1,4 @@
-# LINUX CLI CHEET SHEET
+# LINUX CLI CHEAT SHEET
 
 - [Package Managers](#package-managers)
     - [Introduction to Package Managers](#introduction-to-package-managers)
