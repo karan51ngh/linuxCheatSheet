@@ -1,12 +1,12 @@
 # LINUX CLI CHEET SHEET
 
 - [Package Managers](#package-managers)
- - [Introduction to Package Managers](#introduction-to-package-managers)
- - [Package Managers and Software Packages](#from-where-do-package-managers-get-these-software-packages)
- - [View List of Repositories](#how-can-i-check-the-repositories-your-system-accesses-for-installing-software)
- - [`apt` package manager](#apt-package-manager)
- - [`dpkg` package manager](#dpkg-package-manager)
- - [`apt` vs `dpkg`](#apt-vs-dpkg)
+  - [Introduction to Package Managers](#introduction-to-package-managers)
+  - [Package Managers and Software Packages](#from-where-do-package-managers-get-these-software-packages)
+  - [View List of Repositories](#how-can-i-check-the-repositories-your-system-accesses-for-installing-software)
+  - [`apt` package manager](#apt-package-manager)
+  - [`dpkg` package manager](#dpkg-package-manager)
+  - [`apt` vs `dpkg`](#apt-vs-dpkg)
 
 ## PACKAGE MANAGERS
 
