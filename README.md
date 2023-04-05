@@ -8,6 +8,8 @@
     - [`dpkg` package manager](#dpkg-package-manager)
     - [`apt` vs `dpkg`](#apt-vs-dpkg)
 - [Linux File System](#linux-file-system)
+    - [About various directories](#about-various-directories)
+    - [File System Navigation using CLI](#file-system-navigation-using-cli)
 
 ## PACKAGE MANAGERS
 
