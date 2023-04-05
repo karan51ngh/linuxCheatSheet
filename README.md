@@ -7,7 +7,7 @@
     - [`apt` package manager](#apt-package-manager)
     - [`dpkg` package manager](#dpkg-package-manager)
     - [`apt` vs `dpkg`](#apt-vs-dpkg)
--[Linux File System](#linux-file-system)
+- [Linux File System](#linux-file-system)
 
 ## PACKAGE MANAGERS
 
