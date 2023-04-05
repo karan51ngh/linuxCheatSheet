@@ -118,6 +118,8 @@ dpkg [options] <package_name.deb>
 
 The Linux file system is a hierarchical directory structure that organizes files and directories in a tree-like structure, with a single root directory at the top of the hierarchy, represented by  `/`. Below the root directory, there are a number of other directories, including `/bin`, `/dev`, `/etc`, `/home`, `/lib`, `/mnt`, `/proc`, `/sbin`, `/tmp`, and `/usr`.
 
+### About various directories
+
  - `/` : This is the root directory and the starting point of the file system. All other directories are contained within it.
  - `/bin` : This directory contains executable programs that are essential for system operation, such as ls, cp, and mv.
  - `/boot` : This directory contains the files needed for booting the system, including the kernel and bootloader.
@@ -134,3 +136,27 @@ The Linux file system is a hierarchical directory structure that organizes files
  - `/tmp` : This directory is used for temporary files that are created by the system and applications.
  - `/usr` : This directory contains non-essential system files, such as user programs and documentation.
  - `/var` : This directory contains variable data files, such as log files and spool directories.
+ 
+### File System Navigation using CLI.
+
+File system navigation in Linux can be done using the command line interface.
+Here are the commands needed in brief:
+- `pwd` command in Linux stands for "print working directory". It is used to display the current working directory, which is the directory that the user is currently in.
+- `ls` command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
+    - Syntax: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
+    - The most commonly used options with the `ls` command:
+        - `ls`: Shows files and directories in short format.
+        - `ls -a`: Shows hidden (that start with a dot `.`)files and directories. 
+        - `ls -l` / `ll`: Shows detailed information about each file and directory, including the file permissions, ownership, size, and modification date.
+        - `ls -h`: Shows file sizes in a human-readable format, such as "2.3K" or "4.5M".
+        - `ls -t`: Sorts files and directories by modification time, with the most recently modified files and directories listed first.
+        - `ls -r`: Reverses the order of sort, so that files and directories are listed in reverse order.
+        - `ls -S`: Sorts files by size, with the largest files listed first.
+        - `ls -R`: Lists the contents of subdirectories recursively.
+        - `ls --color`: Adds color to the output, making it easier to read.
+- `cd` command in Linux is used to change the current working directory.
+    - The most commonly used options with the `cd` command:
+        - `cd` / `cd ~`: Changes the current working directory to your home directory.
+        - `cd <directory_name>`: Changes the current working directory to the specified directory.
+        - `cd -`: Changes the current working directory to the previous working directory.
+        - `cd ..`: Changes the current working directory to the parent directory.
