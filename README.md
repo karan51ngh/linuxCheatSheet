@@ -7,6 +7,7 @@
     - [`apt` package manager](#apt-package-manager)
     - [`dpkg` package manager](#dpkg-package-manager)
     - [`apt` vs `dpkg`](#apt-vs-dpkg)
+-[Linux File System](#linux-file-system)
 
 ## PACKAGE MANAGERS
 
@@ -112,3 +113,24 @@ dpkg [options] <package_name.deb>
  - `dpkg` is a lower-level package manager that works with **individual .deb packages**. 
  - **`dpkg` does not have the ability to automatically resolve dependencies or install packages from a remote repository.**
  - `apt` is a higher-level package manager that is built on top of `dpkg`. It has the ability to automatically resolve dependencies and install packages from a remote repository, making it easier to use than dpkg.
+
+## LINUX FILE SYSTEM
+
+The Linux file system is a hierarchical directory structure that organizes files and directories in a tree-like structure, with a single root directory at the top of the hierarchy, represented by  `/`. Below the root directory, there are a number of other directories, including `/bin`, `/dev`, `/etc`, `/home`, `/lib`, `/mnt`, `/proc`, `/sbin`, `/tmp`, and `/usr`.
+
+ - `/` : This is the root directory and the starting point of the file system. All other directories are contained within it.
+ - `/bin` : This directory contains executable programs that are essential for system operation, such as ls, cp, and mv.
+ - `/boot` : This directory contains the files needed for booting the system, including the kernel and bootloader.
+ - `/dev` : This directory contains device files, which are used to communicate with hardware devices such as printers and USB drives.
+ - `/etc` : This directory contains system configuration files, such as the configuration files for the network, user accounts, and startup scripts.
+ - `/home` : This directory contains user home directories, where users can store their personal files.
+ - `/lib` : This directory contains shared library files that are used by the system and applications.
+ - `/media` : This directory is used for mounting removable media such as CDs, DVDs, and USB drives.
+ - `/mnt` : This directory is used for temporarily mounting file systems, such as network file systems or external hard drives.
+ - `/opt` : This directory is used for installing optional software packages.
+ - `/proc` : This directory provides information about the running processes and system resources.
+ - `/root` : This directory is the home directory for the root user.
+ - `/sbin` : This directory contains essential system administration programs, such as init and shutdown.
+ - `/tmp` : This directory is used for temporary files that are created by the system and applications.
+ - `/usr` : This directory contains non-essential system files, such as user programs and documentation.
+ - `/var` : This directory contains variable data files, such as log files and spool directories.
