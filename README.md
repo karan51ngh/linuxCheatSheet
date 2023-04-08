@@ -143,8 +143,10 @@ The Linux file system is a hierarchical directory structure that organizes files
 
 File system navigation in Linux can be done using the command line interface.
 Here are the commands needed in brief:
-- `pwd` command in Linux stands for "print working directory". It is used to display the current working directory, which is the directory that the user is currently in.
-- `ls` command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
+- ##### `pwd` 
+    This command in Linux stands for "print working directory". It is used to display the current working directory, which is the directory that the user is currently in.
+- ##### `ls`
+    This command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
     - Syntax: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
     - The most commonly used options with the `ls` command:
         - `ls`: Shows files and directories in short format.
@@ -156,9 +158,17 @@ Here are the commands needed in brief:
         - `ls -S`: Sorts files by size, with the largest files listed first.
         - `ls -R`: Lists the contents of subdirectories recursively.
         - `ls --color`: Adds color to the output, making it easier to read.
-- `cd` command in Linux is used to change the current working directory.
+- ##### `cd` 
+    This command in Linux is used to change the current working directory.
     - The most commonly used options with the `cd` command:
         - `cd` / `cd ~`: Changes the current working directory to your home directory.
         - `cd <directory_name>`: Changes the current working directory to the specified directory.
         - `cd -`: Changes the current working directory to the previous working directory.
         - `cd ..`: Changes the current working directory to the parent directory.
+- ##### `touch`
+    This command in Linux is used to create an empty file or update the timestamp of an existing file.
+    - The most commonly used options with the touch command:
+        - `touch <file_name>`: Creates an empty file with the specified name, or updates the timestamp of an existing file.
+        - `touch -a <file_name>`: Updates only the access time of the specified file.
+        - `touch -m <file_name>`: Updates only the modification time of the specified file.
+        - `touch -d [date] <file_name>`: Sets the access and modification times of the specified file to the specified date and time. The date must be in the format **YYYY-MM-DD HH:MM:SS**.
