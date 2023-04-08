@@ -1,5 +1,5 @@
 # LINUX CLI CHEAT SHEET
-
+Index of Content:
 - [Package Managers](#package-managers)
     - [Introduction to Package Managers](#introduction-to-package-managers)
     - [Package Managers and Software Packages](#from-where-do-package-managers-get-these-software-packages)
@@ -10,6 +10,16 @@
 - [Linux File System](#linux-file-system)
     - [About various directories](#about-various-directories)
     - [File System Navigation using CLI](#file-system-navigation-using-cli)
+        - [pwd](#pwd)
+        - [ls](#ls)
+        - [cd](#cd)
+        - [touch](#touch)
+        - [cat](#cat)
+        - [mv](#mv)
+        - [cp](#cp)
+        - [rm](#rm)
+        - [rmdir](#rmdir)
+        
 
 ## PACKAGE MANAGERS
 
@@ -144,31 +154,71 @@ The Linux file system is a hierarchical directory structure that organizes files
 File system navigation in Linux can be done using the command line interface.
 Here are the commands needed in brief:
 - ##### `pwd` 
-    This command in Linux stands for "print working directory". It is used to display the current working directory, which is the directory that the user is currently in.
+    This command in Linux stands for **"print working directory"**. It is used to display the current working directory, which is the directory that the user is currently in.
 - ##### `ls`
     This command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
     - Syntax: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
-    - The most commonly used options with the `ls` command:
+    - options:
         - `ls`: Shows files and directories in short format.
-        - `ls -a`: Shows hidden (that start with a dot `.`)files and directories. 
-        - `ls -l` / `ll`: Shows detailed information about each file and directory, including the file permissions, ownership, size, and modification date.
-        - `ls -h`: Shows file sizes in a human-readable format, such as "2.3K" or "4.5M".
-        - `ls -t`: Sorts files and directories by modification time, with the most recently modified files and directories listed first.
-        - `ls -r`: Reverses the order of sort, so that files and directories are listed in reverse order.
-        - `ls -S`: Sorts files by size, with the largest files listed first.
-        - `ls -R`: Lists the contents of subdirectories recursively.
-        - `ls --color`: Adds color to the output, making it easier to read.
+        - `ls -a`: Shows **hidden** (that start with a dot `.`)files and directories. 
+        - `ls -l` / `ll`: Shows **detailed information** about each file and directory, including the file permissions, ownership, size, and modification date.
+        - `ls -h`: Shows file sizes in a **human-readable format**, such as "*2.3K*" or "*4.5M*".
+        - `ls -t`: Sorts files and directories by **modification time**, with the most recently modified files and directories listed first.
+        - `ls -r`: **Reverses** the **order** of sort, so that files and directories are listed in reverse order.
+        - `ls -S`: **Sorts** files by size, with the largest files listed first.
+        - `ls -R`: Lists the contents of subdirectories **recursively**.
+        - `ls --color`: Adds **color** to the **output**, making it easier to read.
 - ##### `cd` 
     This command in Linux is used to change the current working directory.
-    - The most commonly used options with the `cd` command:
-        - `cd` / `cd ~`: Changes the current working directory to your home directory.
+    - Options:
+        - `cd` / `cd ~`: Changes the current working directory to your **home** directory.
         - `cd <directory_name>`: Changes the current working directory to the specified directory.
-        - `cd -`: Changes the current working directory to the previous working directory.
-        - `cd ..`: Changes the current working directory to the parent directory.
+        - `cd -`: Changes the current working directory to the **previous** working directory.
+        - `cd ..`: Changes the current working directory to the **parent** directory.
 - ##### `touch`
     This command in Linux is used to create an empty file or update the timestamp of an existing file.
-    - The most commonly used options with the touch command:
+    - Syntax: `touch [OPTION]... <FILE_NAMES>...`
+    - Options:
         - `touch <file_name>`: Creates an empty file with the specified name, or updates the timestamp of an existing file.
-        - `touch -a <file_name>`: Updates only the access time of the specified file.
-        - `touch -m <file_name>`: Updates only the modification time of the specified file.
+        - `touch -a <file_name>`: Updates only the **access time** of the specified file.
+        - `touch -m <file_name>`: Updates only the **modification time** of the specified file.
         - `touch -d [date] <file_name>`: Sets the access and modification times of the specified file to the specified date and time. The date must be in the format **YYYY-MM-DD HH:MM:SS**.
+- ##### `cat`
+    This command is primarily used to concatenate and display the contents of one or more files, but can also be used to modify them.
+    - Syntax: `cat [OPTION]... <FILE_NAMES>...`
+    - The most commonly used options with the touch command:
+        - `cat <file_name>`: Displays the contents of the specified file on the screen.
+        - `cat <file_1> <file_2>`: **Concatenates** the contents of two or more files and displays them on the screen.
+        - `cat -n <file_name>`: Displays the contents of the specified file on the screen, with line numbers.
+        - `cat -b <file_name>`: Displays the contents of the specified file on the screen, with line numbers only for non-blank lines.
+        - `cat <file_1> >> <file_2>`: **Appends** contents of *file_1* to the contents of *file_2*.
+        - `cat <file_1> > <file_2>`:  **Replaces** the contents of an *file_2* with the content of *file_1*.
+- ##### `mv`
+	This command is used to move or rename files and directories.
+    - Syntax: `mv [Options] [source/directory/file/name] [destination/directory/file/name]`
+	- Options:
+	    - `mv file.txt /home/user/new_directory/`: move the file file.txt to the directory /home/user/new_directory/.
+		- `mv -i <file_name> <directory_name>`: Makes the process **interactive**, **prompts** before overwriting an existing file.
+		- `mv -f <file_name> <directory_name>`: **Forces** the move or rename operation without prompting, even if the destination file already exists.
+		- `mv -v <file_name> <directory_name>`: Displays **verbose** output, showing the names of the files or directories being moved or renamed.
+		- `mv <file_1> <file_2>`: This will **rename** the file from *file_1* to *file_2*.
+- ##### `cp`
+    This is used to copy files and directories from one location to another.
+    - Syntax: `cp [Options] [source/directory/file/name] [destination/directory/file/name]`
+	- Options:
+	    - `cp <file_1> /home/user/new_directory/`: copy the file *file_1* to the directory */home/user/new_directory/*.
+		- `cp -i <file_name> <directory_name>`: Makes the process **interactive**, **prompts** before overwriting an existing file
+		- `cp -f <file_name> <directory_name>`: **Forces** the copy operation without prompting, even if the destination file, with the same name already exists.
+		- `cp <file_1> <file_2> <file_3> /destination/directory`: 
+		Copying **multiple files**.
+		- `cp -r /home/user/old_directory /home/user/new_directory/`: This will **recursively copy** the **directory** */home/user/old_directory* and its contents to the directory */home/user/new_directory/*.
+		- `cp <file_1> <file_2>`: This will create a copy of the file *file_1* to the same directory, with the name *file_2*.
+- ##### `rm`
+    -This is used to remove or delete files and directories. 
+    - Syntax: `cat [OPTION]... <FILE_NAMES> <DIR_NAMES>...`
+    - Options: 
+        - `rm <file_1>`: This will delete file_1.
+        - `rm -r <directory_name/>`: This will recursively delete the directory directory and its contents.
+        - `rm -f <file_1>`: *Forces** the deletion of file without prompting, even if the file is write-protected.
+        - - `rm -i <file_1>`: Makes the process **interactive**, **prompts** before deleting the file
+- ##### `rmdir`
