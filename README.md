@@ -49,9 +49,11 @@ The Linux file system is a hierarchical directory structure that organizes files
 File system navigation in Linux can be done using the command line interface.
 Here are the commands needed in brief:
 - ##### `pwd` 
-    This command in Linux stands for **"print working directory"**. It is used to display the current working directory, which is the directory that the user is currently in.
+	>This command in Linux stands for **"print working directory"**. It is used to display the current working directory, which is the directory that the user is currently in.
+
 - ##### `ls`
-    This command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
+	>This command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
+
     - Syntax: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
     - options:
         - `ls`: Shows files and directories in short format.
@@ -64,14 +66,16 @@ Here are the commands needed in brief:
         - `ls -R`: Lists the contents of subdirectories **recursively**.
         - `ls --color`: Adds **color** to the **output**, making it easier to read.
 - ##### `cd` 
-    This command in Linux is used to change the current working directory.
+    >This command in Linux is used to change the current working directory.
+
     - Options:
         - `cd` / `cd ~`: Changes the current working directory to your **home** directory.
         - `cd <directory_name>`: Changes the current working directory to the specified directory.
         - `cd -`: Changes the current working directory to the **previous** working directory.
         - `cd ..`: Changes the current working directory to the **parent** directory.
 - ##### `touch`
-    This command in Linux is used to create an empty file or update the timestamp of an existing file.
+	>This command in Linux is used to create an empty file or update the timestamp of an existing file.
+
     - Syntax: `touch [OPTION]... <FILE_NAMES>...`
     - Options:
         - `touch <file_name>`: Creates an empty file with the specified name, or updates the timestamp of an existing file.
@@ -79,7 +83,8 @@ Here are the commands needed in brief:
         - `touch -m <file_name>`: Updates only the **modification time** of the specified file.
         - `touch -d [date] <file_name>`: Sets the access and modification times of the specified file to the specified date and time. The date must be in the format **YYYY-MM-DD HH:MM:SS**.
 - ##### `cat`
-    This command is primarily used to concatenate and display the contents of one or more files, but can also be used to modify them.
+	>This command is primarily used to concatenate and display the contents of one or more files, but can also be used to modify them.
+
     - Syntax: `cat [OPTION]... <FILE_NAMES>...`
     - The most commonly used options with the touch command:
         - `cat <file_name>`: Displays the contents of the specified file on the screen.
@@ -89,7 +94,8 @@ Here are the commands needed in brief:
         - `cat <file_1> >> <file_2>`: **Appends** contents of *file_1* to the contents of *file_2*.
         - `cat <file_1> > <file_2>`:  **Replaces** the contents of an *file_2* with the content of *file_1*.
 - ##### `mv`
-	This command is used to move or rename files and directories.
+	>This command is used to move or rename files and directories.
+
     - Syntax: `mv [Options] [source/directory/file/name] [destination/directory/file/name]`
 	- Options:
 	    - `mv file.txt /home/user/new_directory/`: move the file file.txt to the directory /home/user/new_directory/.
@@ -98,7 +104,8 @@ Here are the commands needed in brief:
 		- `mv -v <file_name> <directory_name>`: Displays **verbose** output, showing the names of the files or directories being moved or renamed.
 		- `mv <file_1> <file_2>`: This will **rename** the file from *file_1* to *file_2*.
 - ##### `cp`
-    This is used to copy files and directories from one location to another.
+	>This is used to copy files and directories from one location to another.
+
     - Syntax: `cp [Options] [source/directory/file/name] [destination/directory/file/name]`
 	- Options:
 	    - `cp <file_1> /home/user/new_directory/`: copy the file *file_1* to the directory */home/user/new_directory/*.
@@ -109,7 +116,8 @@ Here are the commands needed in brief:
 		- `cp -r /home/user/old_directory /home/user/new_directory/`: This will **recursively copy** the **directory** */home/user/old_directory* and its contents to the directory */home/user/new_directory/*.
 		- `cp <file_1> <file_2>`: This will create a copy of the file *file_1* to the same directory, with the name *file_2*.
 - ##### `rm`
-    This is used to remove or delete files and directories. 
+	>This is used to remove or delete files and directories.
+
     - Syntax: `cat [OPTION]... <FILE_NAMES> <DIR_NAMES>...`
     - Options: 
         - `rm <file_1>`: This will delete file_1.
@@ -117,8 +125,9 @@ Here are the commands needed in brief:
         - `rm -f <file_1>`: *Forces** the deletion of file without prompting, even if the file is write-protected.
         - - `rm -i <file_1>`: Makes the process **interactive**, **prompts** before deleting the file
 - ##### `rmdir`
-    This command is used to remove empty directories in Linux.
-    - Syntax: `rmdir <directory_name>`
+	>This command is used to remove empty directories in Linux.
+   	
+   	- Syntax: `rmdir <directory_name>`
 ## PACKAGE MANAGERS
 
 ### Introduction to Package Managers:
