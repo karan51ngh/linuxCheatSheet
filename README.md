@@ -127,7 +127,7 @@ Here are the commands needed in brief:
 - ##### `rmdir`
 	>This command is used to remove empty directories in Linux.
    	
-   	- Syntax: `rmdir <directory_name>`
+    - Syntax: `rmdir <directory_name>`
 ## PACKAGE MANAGERS
 
 ### Introduction to Package Managers:
