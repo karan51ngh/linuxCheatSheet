@@ -19,8 +19,11 @@ Index of Content:
     - [`apt` package manager](#apt-package-manager)
     - [`dpkg` package manager](#dpkg-package-manager)
     - [`apt` vs `dpkg`](#apt-vs-dpkg)
+- [File Permissions](#file-permissions)
+    - [Types of Permissions and Users](#types-of-permissions-and-users)
+    - [Working with Permissions](#working-with-permissions)
+    - [chmod](#chmod-command-is-used-for-modifying-the-permissions-of-a-filedirectory)
 
-        
 ## LINUX FILE SYSTEM
 
 The Linux file system is a hierarchical directory structure that organizes files and directories in a tree-like structure, with a single root directory at the top of the hierarchy, represented by  `/`. Below the root directory, there are a number of other directories, including `/bin`, `/dev`, `/etc`, `/home`, `/lib`, `/mnt`, `/proc`, `/sbin`, `/tmp`, and `/usr`.
@@ -54,8 +57,8 @@ Here are the commands needed in brief:
 - ##### `ls`
 	>This command in Linux is used to list the contents of a directory and it also provides information about the files and directories in the current directory / specified directory.
 
-    - Syntax: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
-    - options:
+    - *Syntax*: `ls [options] <directory_name>`. `<directory_name>` by default is the current working directory. 
+    - *options*:
         - `ls`: Shows files and directories in short format.
         - `ls -a`: Shows **hidden** (that start with a dot `.`)files and directories. 
         - `ls -l` / `ll`: Shows **detailed information** about each file and directory, including the file permissions, ownership, size, and modification date.
@@ -68,7 +71,7 @@ Here are the commands needed in brief:
 - ##### `cd` 
     >This command in Linux is used to change the current working directory.
 
-    - Options:
+    - *Options*:
         - `cd` / `cd ~`: Changes the current working directory to your **home** directory.
         - `cd <directory_name>`: Changes the current working directory to the specified directory.
         - `cd -`: Changes the current working directory to the **previous** working directory.
@@ -76,8 +79,8 @@ Here are the commands needed in brief:
 - ##### `touch`
 	>This command in Linux is used to create an empty file or update the timestamp of an existing file.
 
-    - Syntax: `touch [OPTION]... <FILE_NAMES>...`
-    - Options:
+    - *Syntax*: `touch [OPTION]... <FILE_NAMES>...`
+    - *Options*:
         - `touch <file_name>`: Creates an empty file with the specified name, or updates the timestamp of an existing file.
         - `touch -a <file_name>`: Updates only the **access time** of the specified file.
         - `touch -m <file_name>`: Updates only the **modification time** of the specified file.
@@ -85,8 +88,8 @@ Here are the commands needed in brief:
 - ##### `cat`
 	>This command is primarily used to concatenate and display the contents of one or more files, but can also be used to modify them.
 
-    - Syntax: `cat [OPTION]... <FILE_NAMES>...`
-    - The most commonly used options with the touch command:
+    - *Syntax*: `cat [OPTION]... <FILE_NAMES>...`
+    - *Options*:
         - `cat <file_name>`: Displays the contents of the specified file on the screen.
         - `cat <file_1> <file_2>`: **Concatenates** the contents of two or more files and displays them on the screen.
         - `cat -n <file_name>`: Displays the contents of the specified file on the screen, with line numbers.
@@ -96,8 +99,8 @@ Here are the commands needed in brief:
 - ##### `mv`
 	>This command is used to move or rename files and directories.
 
-    - Syntax: `mv [Options] [source/directory/file/name] [destination/directory/file/name]`
-	- Options:
+    - *Syntax*: `mv [Options] [source/directory/file/name] [destination/directory/file/name]`
+	- *Options*:
 	    - `mv file.txt /home/user/new_directory/`: move the file file.txt to the directory /home/user/new_directory/.
 		- `mv -i <file_name> <directory_name>`: Makes the process **interactive**, **prompts** before overwriting an existing file.
 		- `mv -f <file_name> <directory_name>`: **Forces** the move or rename operation without prompting, even if the destination file already exists.
@@ -106,8 +109,8 @@ Here are the commands needed in brief:
 - ##### `cp`
 	>This is used to copy files and directories from one location to another.
 
-    - Syntax: `cp [Options] [source/directory/file/name] [destination/directory/file/name]`
-	- Options:
+    - *Syntax*: `cp [Options] [source/directory/file/name] [destination/directory/file/name]`
+	- *Options*:
 	    - `cp <file_1> /home/user/new_directory/`: copy the file *file_1* to the directory */home/user/new_directory/*.
 		- `cp -i <file_name> <directory_name>`: Makes the process **interactive**, **prompts** before overwriting an existing file
 		- `cp -f <file_name> <directory_name>`: **Forces** the copy operation without prompting, even if the destination file, with the same name already exists.
@@ -118,8 +121,8 @@ Here are the commands needed in brief:
 - ##### `rm`
 	>This is used to remove or delete files and directories.
 
-    - Syntax: `cat [OPTION]... <FILE_NAMES> <DIR_NAMES>...`
-    - Options: 
+    - *Syntax*: `cat [OPTION]... <FILE_NAMES> <DIR_NAMES>...`
+    - *Options*: 
         - `rm <file_1>`: This will delete file_1.
         - `rm -r <directory_name/>`: This will recursively delete the directory directory and its contents.
         - `rm -f <file_1>`: *Forces** the deletion of file without prompting, even if the file is write-protected.
@@ -127,7 +130,8 @@ Here are the commands needed in brief:
 - ##### `rmdir`
 	>This command is used to remove empty directories in Linux.
    	
-    - Syntax: `rmdir <directory_name>`
+    - *Syntax*: `rmdir <directory_name>`
+
 ## PACKAGE MANAGERS
 
 ### Introduction to Package Managers:
@@ -165,9 +169,8 @@ Here Terminal Commands for checking the repositories on various major Linux dist
 ### apt package manager
 
 - The `apt` command is a package management tool for **Debian-based** Linux distributions.
-
-- Here are some of the most commonly used options and commands available with apt:
-
+- *Syntax*: `apt [options] <package_name>`
+- *Options*:
     - `apt update`: updates the package lists from the repositories.
     - `apt upgrade`: upgrades the installed packages to their latest versions.
     - `apt install package`: installs the specified package and its dependencies.
@@ -195,12 +198,8 @@ Here Terminal Commands for checking the repositories on various major Linux dist
 ### dpkg package manager:
  
 - `dpkg` is a package manager for **Debian-based** systems such as **Ubuntu**. It is used to *install*, *remove*, and *manage software packages* in the `.deb` format.
-- The basic syntax of the dpkg command is as follows:
-```
-dpkg [options] <package_name.deb>
-```
-- Some common options that are available with the dpkg command:
-
+- *Syntax*: `dpkg [options] <package_name.deb>`
+- *Options*:
     - `-i`/`--install`: Install a package from a .deb file.
     - `-r`/`--remove`: Remove a package from the system, leaving its configuration files intact.
     - `-P`/`--purge`: Purge a package from the system, and remove the package and its configuration files.
@@ -232,3 +231,60 @@ dpkg [options] <package_name.deb>
  - `dpkg` is a lower-level package manager that works with **individual .deb packages**. 
  - **`dpkg` does not have the ability to automatically resolve dependencies or install packages from a remote repository.**
  - `apt` is a higher-level package manager that is built on top of `dpkg`. It has the ability to automatically resolve dependencies and install packages from a remote repository, making it easier to use than dpkg.
+ 
+## FILE PERMISSIONS
+
+File permissions are a way of controlling access to files and directories. 
+
+### Types of Permissions and Users
+
+There are **three types of permissions**: *read*, *write*, and *execute*.
+- **Read (r)** - The read permission allows a user to **view** the contents of a file or directory. When applied to a directory, it allows the user to see the names of the files and subdirectories within it.
+- **Write (w)** - The write permission allows a user to **modify** the contents of a file or directory. When applied to a directory, it allows the user to create, delete, or rename files and subdirectories within it.
+- **Execute (x)** - The execute permission allows a user to **run** a program or script. When applied to a directory, it allows the user to access the files and subdirectories within it.
+
+These permissions are assigned to **three categories of users**: *owner*, *group*, and *others*.
+- **owner** is the user who **created** it or the user who currently owns it. 
+- **group** is a collection of users who share **similar permissions** to access certain files or directories. You can give multiple users the same level of access to that file or directory without having to set individual permissions for each user
+- **others** includes all users who do not fall into the categories of owner or group.
+
+### Working with Permissions
+- To view the file permissions, use `ls -l` command:
+    
+    *output*:
+    
+    ```bash
+    -rwxrw-r-- 12 karan51ngh users 64.0K Feb  26 11:11 file_name
+    |[-][-][-]-   [--------] [---]
+    | |  |  | |      |       |
+    | |  |  | |      |       +-------------> 7. Group Name
+    | |  |  | |      +---------------------> 6. Owner Name
+    | |  |  | +----------------------------> 5. Alternate Access Method
+    | |  |  +------------------------------> 4. Others Permissions
+    | |  +---------------------------------> 3. Group Permissions
+    | +------------------------------------> 2. Owner Permissions
+    +--------------------------------------> 1. File Type
+    ```
+- The table below represents what number is assigned for all the different types of permissions.
+    | Number | Permission Type        | Symbol      |
+    | ------ | ---------------------- | ----------- |
+    | 0      | Permission Type        | ---         |
+    | 1      | Execute                | --x         |
+    | 2      | Write                  | -w-         |
+    | 3      | Execute + Write        | -wx         |
+    | 4      | Read                   | r--         |
+    | 5      | Read + Execute         | r-x         |
+    | 6      | Read + Write           | rw-         |
+    | 7      | Read + Write + Execute | rwx         |
+    
+- #### `chmod` command is used for modifying the permissions of a file/directory.
+    - Symbollic mode:
+        - Syntax: `chmod <user_type><take/remove permission><list_of_permissions> <file_names>`
+        - Examples:
+            - to add execute permissions for the owner of a file you would run: `chmod u+x file_name`
+            - to add read and write permissions for the group that owns the file, you would run: `chmod g+rw file_name`
+            - to remove write permissions for the owner of a file you would run: `chmod o-w file_name`
+    - Numeric Mode: We can use the numbers assigned to different permissions.
+        - Syntax: `chmod <number_owner><number_group><number_others> <file_names>`
+        - Examples:
+            - to set permissions on a file to rwxrw-r-–, you would run: `chmod 764 file_name`
