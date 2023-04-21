@@ -284,7 +284,9 @@ These permissions are assigned to **three categories of users**: *owner*, *group
             - to add execute permissions for the owner of a file you would run: `chmod u+x file_name`
             - to add read and write permissions for the group that owns the file, you would run: `chmod g+rw file_name`
             - to remove write permissions for the owner of a file you would run: `chmod o-w file_name`
-    - *Numeric Mode*: We can use the numbers assigned to different permissions.
+    - *Numeric Mode*:
+        > We can use the numbers(from the above table) assigned to different permissions.
+        
         - *Syntax*: `chmod <number_owner><number_group><number_others> <file_names>`
         - *Example*:
             - to set permissions on a file to rwxrw-r-–, you would run: `chmod 764 file_name`
