@@ -265,7 +265,7 @@ These permissions are assigned to **three categories of users**: *owner*, *group
     | +------------------------------------> 2. Owner Permissions
     +--------------------------------------> 1. File Type
     ```
-- The table below represents what number is assigned for all the different types of permissions.
+- The table below represents what **number is assigned** for all the different **types of permissions**.
     | Number | Permission Type        | Symbol      |
     | ------ | ---------------------- | ----------- |
     | 0      | Permission Type        | ---         |
@@ -278,13 +278,13 @@ These permissions are assigned to **three categories of users**: *owner*, *group
     | 7      | Read + Write + Execute | rwx         |
     
 - #### `chmod` command is used for modifying the permissions of a file/directory.
-    - Symbollic mode:
-        - Syntax: `chmod <user_type><take/remove permission><list_of_permissions> <file_names>`
-        - Examples:
+    - *Symbollic mode*:
+        - *Syntax*: `chmod <user_type><take/remove permission><list_of_permissions> <file_names>`
+        - *Examples*:
             - to add execute permissions for the owner of a file you would run: `chmod u+x file_name`
             - to add read and write permissions for the group that owns the file, you would run: `chmod g+rw file_name`
             - to remove write permissions for the owner of a file you would run: `chmod o-w file_name`
-    - Numeric Mode: We can use the numbers assigned to different permissions.
-        - Syntax: `chmod <number_owner><number_group><number_others> <file_names>`
-        - Examples:
+    - *Numeric Mode*: We can use the numbers assigned to different permissions.
+        - *Syntax*: `chmod <number_owner><number_group><number_others> <file_names>`
+        - *Example*:
             - to set permissions on a file to rwxrw-r-–, you would run: `chmod 764 file_name`
