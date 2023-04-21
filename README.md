@@ -238,12 +238,14 @@ File permissions are a way of controlling access to files and directories.
 
 ### Types of Permissions and Users
 
-There are **three types of permissions**: *read*, *write*, and *execute*.
+>There are **three types of permissions**: *read*, *write*, and *execute*.
+
 - **Read (r)** - The read permission allows a user to **view** the contents of a file or directory. When applied to a directory, it allows the user to see the names of the files and subdirectories within it.
 - **Write (w)** - The write permission allows a user to **modify** the contents of a file or directory. When applied to a directory, it allows the user to create, delete, or rename files and subdirectories within it.
 - **Execute (x)** - The execute permission allows a user to **run** a program or script. When applied to a directory, it allows the user to access the files and subdirectories within it.
 
-These permissions are assigned to **three categories of users**: *owner*, *group*, and *others*.
+>These permissions are assigned to **three categories of users**: *owner*, *group*, and *others*.
+
 - **owner** is the user who **created** it or the user who currently owns it. 
 - **group** is a collection of users who share **similar permissions** to access certain files or directories. You can give multiple users the same level of access to that file or directory without having to set individual permissions for each user
 - **others** includes all users who do not fall into the categories of owner or group.
