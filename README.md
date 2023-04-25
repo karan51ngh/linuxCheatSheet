@@ -25,6 +25,8 @@ Index of Content:
     - [chmod](#chmod-command-is-used-for-modifying-the-permissions-of-a-filedirectory)
 - [Process Management](#process-management)
     - [top](#top)
+    - [kill](#kill)
+    - [killall](#killall)
 
 ## LINUX FILE SYSTEM
 
@@ -311,4 +313,36 @@ A process is an instance of a running program, and each process has its own uniq
         - `top -p <process_id1>,<process_id2>,...`: allows you to specify the process ID(s) to monitor.
         - `top -u <user_name>`: allows you to filter the output by the speified user.
         - `top -H`: displays the process hierarchy in a tree-like format. This is useful for understanding the relationships between processes.
-        - `top -o <field_name>`:allows you to sort the output by a specific field. For e.g. `top -o %CPU`, `top -o TIME`, `top -o UID`, `top -o %MEM` etc.
+        - `top -o <field_name>`:allows you to sort the output by a specific field. For example `top -o %CPU`, `top -o TIME`, `top -o UID`, `top -o %MEM` etc.
+        
+- ##### `kill`
+    >The is used to send     signals to running processes. The signals can be used to control the behavior of the processes or terminate them.
+    
+    - *Syntax*: `kill [signal] [pid]`
+    - *Signals*:
+        - **TERM** (signal 15): Request that the process terminate gracefully.
+        - **KILL** (signal 9): Forcefully terminate the process without allowing it to perform any cleanup.
+        - **HUP** (signal 1): Send the hangup signal, which is typically used to request that a process reload its configuration file.
+        - **INT** (signal 2): Send the interrupt signal, which is similar to pressing Ctrl+C on the keyboard.
+        - If you **do not specify** a signal, kill sends the **TERM signal by default**, which requests that the process terminate gracefully.
+        - use the `-s` option to specify a signal by name rather than number. For example, `kill -s SIGTERM [pid]` is equivalent to `kill -15 [pid]`.
+    - *Examples*:
+        - `kill 1234`: Send the default TERM signal to the process with the ID 1234.
+        - `kill -9 5678`: Forcefully terminate the process with the ID 5678 using the KILL signal.
+        - `kill -s HUP 9876`: Send the hangup signal to the process with the ID 9876.
+        - `kill -INT 2345`: Send the interrupt signal (equivalent to Ctrl+C) to the process with the ID 2345.
+    
+- ##### `killall`
+    > This command is used to send signals to all processes that match a given name, making it a more convenient way than `kill` to terminate multiple processes at once. By default, killall sends the TERM signal.
+    
+    - *Syntax*: `killall [options] <name>`
+    - *Options*:
+        - `killall -u <user> <name>`: Send the default TERM signal to all <name> processes owned by the user <user>.
+        - `killall -g <group> <name>`: Send the default TERM signal to all <name> processes belonging to the users group <group>.
+        - `-v` and `-i` are used for verbose output and interactive process respectively.
+    - *Examples*:
+        - `killall firefox`: Send the default TERM signal to all processes with the name firefox.
+        - `killall -s KILL apache2`: Forcefully terminate all processes with the name apache2 using the KILL signal.
+        - `killall -i -s TERM sshd`: Interactively prompt the user before sending the TERM signal to all sshd processes.
+        - `killall -u alice firefox`: Send the default TERM signal to all firefox processes owned by the user alice.
+        - `killall -g users chrome`: Send the default TERM signal to all chrome processes belonging to the users group.
