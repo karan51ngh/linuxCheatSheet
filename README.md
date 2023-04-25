@@ -23,6 +23,8 @@ Index of Content:
     - [Types of Permissions and Users](#types-of-permissions-and-users)
     - [Working with Permissions](#working-with-permissions)
     - [chmod](#chmod-command-is-used-for-modifying-the-permissions-of-a-filedirectory)
+- [Process Management](#process-management)
+    - [top](#top)
 
 ## LINUX FILE SYSTEM
 
@@ -279,7 +281,9 @@ File permissions are a way of controlling access to files and directories.
     | 6      | Read + Write           | rw-         |
     | 7      | Read + Write + Execute | rwx         |
     
-- #### `chmod` command is used for modifying the permissions of a file/directory.
+- ##### `chmod` 
+    >This is used for modifying the permissions of a file/directory.
+    
     - *Symbollic mode*:
         - *Syntax*: `chmod <user_type><take/remove permission><list_of_permissions> <file_names>`
         - *Examples*:
@@ -292,3 +296,19 @@ File permissions are a way of controlling access to files and directories.
         - *Syntax*: `chmod <number_owner><number_group><number_others> <file_names>`
         - *Example*:
             - to set permissions on a file to rwxrw-r-–, you would run: `chmod 764 file_name`
+
+## Process Management
+
+A process is an instance of a running program, and each process has its own unique process ID (**PID**), as well as other attributes such as a parent process ID (**PPID**), priority(**PR**), CPU and memory usage, and input/output streams.
+
+- ##### `top`
+    >This is used to monitor the performance of the system and display real-time information about the processes running on it.
+    
+    - *Syntax*: `top [options]`
+    - *Options*:
+        - `top -d <n>`: sets the delay as *n seconds* between updates of the process list.
+        - `top -n <n>`: sets the number of iterations for which the `top` command will run before exiting as *n*.
+        - `top -p <process_id1>,<process_id2>,...`: allows you to specify the process ID(s) to monitor.
+        - `top -u <user_name>`: allows you to filter the output by the speified user.
+        - `top -H`: displays the process hierarchy in a tree-like format. This is useful for understanding the relationships between processes.
+        - `top -o <field_name>`:allows you to sort the output by a specific field. For e.g. `top -o %CPU`, `top -o TIME`, `top -o UID`, `top -o %MEM` etc.
